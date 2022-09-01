@@ -34,3 +34,22 @@ Thanks to:
 ➤ https://www.assemblyai.com/blog/how-to-run-stable-diffusion-locally-to-generate-images/
 
 ➤ https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md
+
+
+## Homebrew
+
+Install:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Verify:
+
+```sh
+brew --prefix
+/opt/homebrew
+
+brew --version
+Homebrew 3.5.10
+```
