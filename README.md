@@ -110,3 +110,20 @@ brew --prefix git
 git --version
 git version 2.37.3
 ```
+
+
+## protobuf
+
+Install:
+
+```sh
+brew install protobuf
+```
+
+Verify:
+
+```
+brew --prefix protobuf
+/opt/homebrew/opt/protobuf
+```
+
