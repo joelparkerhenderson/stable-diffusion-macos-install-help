@@ -72,3 +72,22 @@ brew --prefix python
 python3 --version
 Python 3.10.6
 ```
+
+
+## cmake
+
+Install:
+
+```sh
+brew install cmake
+```
+
+Verify:
+
+```sh
+brew --prefix cmake 
+/opt/homebrew/opt/cmake
+
+cmake --version
+cmake version 3.24.1
+```
