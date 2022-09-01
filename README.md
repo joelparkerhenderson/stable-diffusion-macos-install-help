@@ -91,3 +91,22 @@ brew --prefix cmake
 cmake --version
 cmake version 3.24.1
 ```
+
+
+## git
+
+Install:
+
+```sh
+brew install git
+```
+
+Verify:
+
+```sh
+brew --prefix git  
+/opt/homebrew/opt/git
+
+git --version
+git version 2.37.3
+```
