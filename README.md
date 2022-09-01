@@ -202,12 +202,17 @@ $HOME/opt/anaconda3
 
 Type your preferred installation directory, and return.
 
-Anaconda
+
+### conda init
+
+Anaconda prompts you to run this:
 
 ```txt
 Do you wish the installer to initialize Anaconda3
 by running conda init? [yes|no]
 ```
+
+Type `yes` and return.
 
 
 ### Success
