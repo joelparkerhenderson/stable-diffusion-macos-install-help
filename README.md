@@ -127,3 +127,22 @@ brew --prefix protobuf
 /opt/homebrew/opt/protobuf
 ```
 
+
+## Rust
+
+Install:
+
+```sh
+brew install rust
+```
+
+Verify:
+
+```sh
+brew --prefix rust
+/opt/homebrew/opt/rust
+
+rustc --version
+rustc 1.63.0
+```
+
