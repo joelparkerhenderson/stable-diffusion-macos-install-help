@@ -146,3 +146,104 @@ rustc --version
 rustc 1.63.0
 ```
 
+
+## Anaconda
+
+Install Anaconda 3:
+
+```sh
+brew install anaconda
+```
+
+
+### Script
+
+Anaconda uses an installation script, and you must run it, such as:
+
+```sh
+sudo /opt/homebrew/Caskroom/anaconda/2022.05/Anaconda3-2022.05-MacOSX-arm64.sh
+```
+
+
+### License
+
+Anaconda prompts you to agree to the license:
+
+```sh
+Do you accept the license terms? [yes|no]
+```
+
+Type `yes` and return.
+
+
+### Directory
+
+Anaconda prompts you to choose an installation directory:
+
+```
+Anaconda3 will now be installed into this location:
+/Users/brew/anaconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+```
+
+We prefer to install software inside our typical `opt` directory:
+
+```sh
+$HOME/opt/anaconda3
+```
+
+Type your preferred installation directory, and return.
+
+Anaconda
+
+```txt
+Do you wish the installer to initialize Anaconda3
+by running conda init? [yes|no]
+```
+
+
+### Success
+
+Anaconda installs and advises you:
+
+```txt
+For changes to take effect, close and re-open your current shell.
+```
+
+Verify the installation works by running Anaconda using its full path:
+
+```sh
+/opt/anaconda3/condabin/conda --version
+conda 4.13.0
+```
+
+
+### Path
+
+Optionally, you can append the Anaconda path to your environment, such as by editing any of these:
+
+* `/etc/bashrc` 
+
+* `/etc/zshrc`
+
+* `$HOME/.bashrc` 
+
+* `$HOME/.zshrc`
+
+Export your preferred path such as:
+
+```sh
+export PATH="$PATH:$HOME/opt/anaconda3/condabin"
+```
+
+Restart your terminal, or source the path file, or equivalent.
+
+After you add the Anaconda path, then you can verify it:
+
+```sh
+conda --version
+conda 4.13.0
+```
