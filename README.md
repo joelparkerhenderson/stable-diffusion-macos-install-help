@@ -27,6 +27,8 @@ This guide is intentionally step-by-step, because we want to help more people be
 
 This guide is intentionally using steps that help multiple macOS users on the same system, because we want this guide to be able to help people who share a computer, such as teachers and students in schools.
   
+This guide is intentionally doing "kitchen sink" approach, because this can help people with more capabilities as they try Stable Diffusion.
+
 We welcome constructive feedback via GitHub issues, or pull requests, or email to joel@joelparkerhenderson.com.
 
 
