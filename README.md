@@ -53,3 +53,22 @@ brew --prefix
 brew --version
 Homebrew 3.5.10
 ```
+
+
+## Python
+
+Install:
+
+```sh
+brew install python
+```
+
+Verify:
+
+```sh
+brew --prefix python
+/opt/homebrew/opt/python@3.10
+
+python3 --version
+Python 3.10.6
+```
