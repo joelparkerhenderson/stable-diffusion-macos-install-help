@@ -29,7 +29,10 @@ This guide is intentionally using steps that help multiple macOS users on the sa
   
 We welcome constructive feedback via GitHub issues, or pull requests, or email to joel@joelparkerhenderson.com.
 
-Thanks to:
+
+## Thanks
+
+Thanks to many developers working on Stable Diffusion and help for it, and special thanks to:
 
 ➤ https://www.assemblyai.com/blog/how-to-run-stable-diffusion-locally-to-generate-images/
 
