@@ -247,3 +247,19 @@ After you add the Anaconda path, then you can verify it:
 conda --version
 conda 4.13.0
 ```
+
+
+## Weights
+
+Download the Stable Diffusion weights file; heads up that the file is somewhat large, more than 4GB.
+
+```sh
+curl https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media > sd-v1-4.ckpt
+```
+
+We prefer to put the file in its own directory so it's easier to access for all our macOS users:
+
+```sh
+sudo mkdir /opt/stable-diffusion-ckpt
+sudo mv sd-v1-4.ckpt /opt/stable-diffusion-ckpt
+```
