@@ -263,3 +263,48 @@ We prefer to put the file in its own directory so it's easier to access for all 
 sudo mkdir /opt/stable-diffusion-ckpt
 sudo mv sd-v1-4.ckpt /opt/stable-diffusion-ckpt
 ```
+
+
+## Get the stable-diffusion code
+
+This section comes from:
+
+➤ https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md
+
+Install:
+
+```sh
+cd ~
+git clone https://github.com/lstein/stable-diffusion.git
+cd stable-diffusion
+```
+
+Link to the CKPT file:
+
+```sh
+mkdir -p models/ldm/stable-diffusion-v1/
+PATH_TO_CKPT="/opt/stable-diffusion-ckpt"  # use your own directory that contains your CPKT file
+ln -sfn "$PATH_TO_CKPT/sd-v1-4.ckpt" models/ldm/stable-diffusion-v1/model.ckpt
+```
+
+Verify:
+
+Create and activate:
+
+```sh
+CONDA_SUBDIR=osx-arm64 conda env create -f environment-mac.yaml
+conda activate ldm
+```
+
+You should see output such as:
+
+```txt
+Collecting package metadata (repodata.json):
+```
+
+Run the models:
+
+```sh
+python scripts/preload_models.py
+python scripts/dream.py --full_precision  # half-precision requires autocast and won't work
+```
