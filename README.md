@@ -379,3 +379,44 @@ Run:
 ```sh
 python scripts/dream.py --full_precision  # half-precision requires autocast and won't work
 ```
+
+You should see output such as:
+
+```sh
+* Initializing, be patient...
+…
+* Initialization done! Awaiting your command (-h for help, 'q' to quit)
+dream> 
+```
+
+
+### Troubleshooting TypeAlias
+
+If you get this error...
+
+```txt
+File "…/stable-diffusion/src/k-diffusion/k_diffusion/sampling.py", line 10, in <module>
+    from typing import Optional, Callable, TypeAlias
+ImportError: cannot import name 'TypeAlias' from 'typing' ("…/opt/anaconda3/envs/ldm/lib/python3.9/typing.py)
+```
+
+Then try editing this file:
+
+```sh
+src/k-diffusion/k_diffusion/sampling.py`
+```
+
+Change this line:
+
+```python
+from typing import Optional, Callable, TypeAlias
+```
+
+To:
+
+```python
+from typing import Optional, Callable
+from typing_extensions import TypeAlias
+```
+
+➤ https://github.com/lstein/stable-diffusion/issues/302
