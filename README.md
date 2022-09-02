@@ -2,7 +2,7 @@
 
 <p><img src="https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/0715034d-4044-4c55-9131-e4bfd6dd20ca/2_4x.png?format=960w"></p>
 
-Stable Diffusion macOS install help guide for this setup:
+Stable Diffusion macOS install help is our guide for this kind of setup:
 
 * [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) image generator
   
