@@ -158,10 +158,20 @@ rustc 1.63.0
 
 ## Anaconda
 
-Install Anaconda 3:
+Install:
 
 ```sh
 brew install anaconda
+```
+
+Verify:
+
+```sh
+brew info --cask anaconda
+==> anaconda: 2022.05 (auto_updates)
+https://www.anaconda.com/
+/opt/homebrew/Caskroom/anaconda/2022.05 (304.8MB)
+…
 ```
 
 
