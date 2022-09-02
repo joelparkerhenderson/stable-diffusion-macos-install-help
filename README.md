@@ -420,3 +420,43 @@ from typing_extensions import TypeAlias
 ```
 
 ➤ https://github.com/lstein/stable-diffusion/issues/302
+
+
+### Generating
+
+When you have the dream prompt:
+
+```
+dream>
+```
+
+Then you can enter your own command such as:
+
+```sh
+"photography of a cat on the moon" -s 20 -n 3 --sampler k_euler -W 384 -H 384
+```
+
+You should see output such as:
+
+```txt
+Generating…
+Outputs:
+outputs/img-samples/000001.2080708373.png …
+outputs/img-samples/000001.1839445463.png …
+outputs/img-samples/000001.2463981689.png …
+```
+
+You might see warning message that you can ignore for now:
+
+```sh
+…/stable-diffusion/ldm/modules/embedding_manager.py:152: 
+UserWarning: The operator 'aten::nonzero' is not currently supported 
+on the MPS backend and will fall back to run on the CPU. 
+This may have performance implications.
+```
+
+Your output files are now ready in this directory:
+
+```sh
+outputs/img-samples
+```
