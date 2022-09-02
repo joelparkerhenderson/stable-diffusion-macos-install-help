@@ -2,21 +2,23 @@
 
 Stable Diffusion macOS install help guide for this setup:
 
-* Apple MacBook Pro M1
- 
-* Apple macOS 12.5.1
-
-* Homebrew 3.5.10
-
-* Python 3.10.6
- 
-* cmake 3.24.1
+* [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) image generator
   
-* git 2.37.3
+* [Apple macOS Monterey](https://www.apple.com/macos/monterey/) on MacBook Pro M1
 
-* rustc 1.63.0
+* [Homebrew](https://brew.sh) package manager
 
-* Anaconda 4.13.0
+* [Python](https://www.python.org) programming language
+ 
+* [cmake](https://cmake.org) build automation
+  
+* [git](https://www.git-scm.com) source code manager
+
+* [Rust](https://www.rust-lang.org) programming language
+
+* [protobuf](https://developers.google.com/protocol-buffers) data structures
+ 
+* [Anaconda](https://www.anaconda.com) data science platform
 
 
 ## Guide Goals
@@ -178,7 +180,7 @@ Anaconda prompts you to agree to the license:
 Do you accept the license terms? [yes|no]
 ```
 
-Type `yes` and return.
+Type `yes`, then return.
 
 
 ### Directory
@@ -187,7 +189,7 @@ Anaconda prompts you to choose an installation directory:
 
 ```
 Anaconda3 will now be installed into this location:
-/Users/brew/anaconda3
+/Users/…/anaconda3
 
   - Press ENTER to confirm the location
   - Press CTRL-C to abort the installation
@@ -200,7 +202,7 @@ We prefer to install software inside our typical `opt` directory:
 $HOME/opt/anaconda3
 ```
 
-Type your preferred installation directory, and return.
+Type your own preferred installation directory, then return.
 
 
 ### conda init
@@ -212,7 +214,7 @@ Do you wish the installer to initialize Anaconda3
 by running conda init? [yes|no]
 ```
 
-Type `yes` and return.
+Type `yes`, then return.
 
 
 ### Success
@@ -258,6 +260,14 @@ conda --version
 conda 4.13.0
 ```
 
+### Update
+
+Update conda just in case it's changed recently:
+
+```sh
+conda update -n base -c defaults conda
+```
+
 
 ## Weights
 
@@ -297,8 +307,6 @@ PATH_TO_CKPT="/opt/stable-diffusion-ckpt"  # use your own directory that contain
 ln -sfn "$PATH_TO_CKPT/sd-v1-4.ckpt" models/ldm/stable-diffusion-v1/model.ckpt
 ```
 
-Verify:
-
 Create and activate:
 
 ```sh
@@ -309,7 +317,7 @@ conda activate ldm
 You should see output such as:
 
 ```txt
-Collecting package metadata (repodata.json):
+Collecting package metadata (repodata.json)
 ```
 
 Run the models:
