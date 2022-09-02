@@ -360,6 +360,8 @@ Preload python models:
 python scripts/preload_models.py
 ```
 
+Heads up that the script does downloads that are somewhat large, more than 1GB.
+
 You should set output such as:
 
 ```txt
@@ -367,6 +369,8 @@ preloading bert tokenizer...
 preloading Kornia requirements ...
 preloading CLIP model ...
 ```
+
+
 
 ### Run dream
 
