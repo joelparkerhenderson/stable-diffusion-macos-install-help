@@ -448,7 +448,7 @@ outputs/img-samples/000001.1839445463.png …
 outputs/img-samples/000001.2463981689.png …
 ```
 
-You might see warning message that you can ignore for now:
+You might see warning messages that you can ignore for now:
 
 ```sh
 …/stable-diffusion/ldm/modules/embedding_manager.py:152: 
