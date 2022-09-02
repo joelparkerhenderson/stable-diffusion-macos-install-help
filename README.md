@@ -303,6 +303,9 @@ This section comes from:
 
 ➤ https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md
 
+
+### Install
+
 Install:
 
 ```sh
@@ -310,6 +313,9 @@ cd ~
 git clone https://github.com/lstein/stable-diffusion.git
 cd stable-diffusion
 ```
+
+
+### Link
 
 Link to the CKPT file:
 
@@ -319,18 +325,13 @@ PATH_TO_CKPT="/opt/stable-diffusion-ckpt"  # use your own directory that contain
 ln -sfn "$PATH_TO_CKPT/sd-v1-4.ckpt" models/ldm/stable-diffusion-v1/model.ckpt
 ```
 
+
+### Create conda environment
+
 Create:
 
 ```sh
 CONDA_SUBDIR=osx-arm64 conda env create -f environment-mac.yaml
-```
-
-Restart your terminal.
-
-Activate:
-
-```sh
-conda activate ldm
 ```
 
 You should see output such as:
@@ -339,9 +340,38 @@ You should see output such as:
 Collecting package metadata (repodata.json)
 ```
 
-Run the models:
+Restart your terminal.
+
+
+### Activate
+
+Activate:
+
+```sh
+conda activate ldm
+```
+
+
+### Preload models
+
+Preload python models:
 
 ```sh
 python scripts/preload_models.py
+```
+
+You should set output such as:
+
+```txt
+preloading bert tokenizer...
+preloading Kornia requirements ...
+preloading CLIP model ...
+```
+
+### Run dream
+
+Run:
+
+```sh
 python scripts/dream.py --full_precision  # half-precision requires autocast and won't work
 ```
