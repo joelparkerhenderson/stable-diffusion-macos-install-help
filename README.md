@@ -281,7 +281,7 @@ conda update -n base -c defaults conda
 ```
 
 
-## Weights
+## Stable Diffusion weights file
 
 Download the Stable Diffusion weights file; heads up that the file is somewhat large, more than 4GB.
 
@@ -297,7 +297,7 @@ sudo mv sd-v1-4.ckpt /opt/stable-diffusion-ckpt
 ```
 
 
-## Get the stable-diffusion code
+## Stable Diffusion repository
 
 This section comes from:
 
@@ -319,10 +319,17 @@ PATH_TO_CKPT="/opt/stable-diffusion-ckpt"  # use your own directory that contain
 ln -sfn "$PATH_TO_CKPT/sd-v1-4.ckpt" models/ldm/stable-diffusion-v1/model.ckpt
 ```
 
-Create and activate:
+Create:
 
 ```sh
 CONDA_SUBDIR=osx-arm64 conda env create -f environment-mac.yaml
+```
+
+Restart your terminal.
+
+Activate:
+
+```sh
 conda activate ldm
 ```
 
