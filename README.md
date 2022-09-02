@@ -44,6 +44,8 @@ Thanks to many developers working on Stable Diffusion and help for it, and speci
 
 ➤ https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md
 
+➤ https://news.ycombinator.com/item?id=32678664
+
 
 ## Homebrew
 
