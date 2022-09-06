@@ -22,6 +22,10 @@ Stable Diffusion macOS install help is our guide for this kind of setup:
  
 * [Anaconda](https://www.anaconda.com) data science platform
 
+See our Stable Diffusion image gallery:
+
+➤ https://github.com/joelparkerhenderson/stable-diffusion-image-galler
+
 
 ## Guide Goals
 
