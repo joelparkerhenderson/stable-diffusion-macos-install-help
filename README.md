@@ -288,7 +288,7 @@ conda update -n base -c defaults conda
 Download the Stable Diffusion weights file; heads up that the file is somewhat large, more than 4GB.
 
 ```sh
-curl https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media > sd-v1-4.ckpt
+curl "https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media" > sd-v1-4.ckpt
 ```
 
 We prefer to put the file in its own directory so it's easier to access for all our macOS users:
