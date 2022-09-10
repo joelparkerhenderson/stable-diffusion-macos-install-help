@@ -327,7 +327,7 @@ Optionally, you can append the Anaconda path to your environment, such as by edi
 Export your preferred path such as:
 
 ```sh
-export PATH="$PATH:$HOME/opt/anaconda3/condabin"
+export PATH="$PATH:$HOME:/opt/anaconda3/condabin"
 ```
 
 Restart your terminal, or source the path file, or equivalent.
