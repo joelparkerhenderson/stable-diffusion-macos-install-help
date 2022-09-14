@@ -238,11 +238,27 @@ https://www.anaconda.com/
 
 ### Script
 
-Anaconda uses an installation script, and you must run it, such as:
+Anaconda uses an installation shell script that you must run.
+
+Find the script:
 
 ```sh
-% sudo /opt/homebrew/Caskroom/anaconda/2022.05/Anaconda3-2022.05-MacOSX-arm64.sh
+find /opt/homebrew/Caskroom/anaconda -name "*.sh" 
 ```
+
+Output shows the shell script name, which may use different version numbers depending on when you install Anaconda:
+
+```sh
+/opt/homebrew/Caskroom/anaconda/2022.05/Anaconda3-2022.05-MacOSX-arm64.sh
+```
+
+Run the shell script via `sudo` and `sh` and the script name from above:
+
+```sh
+% sudo sh /opt/homebrew/Caskroom/anaconda/2022.05/Anaconda3-2022.05-MacOSX-arm64.sh
+```
+
+Your system should prompt you to type your password, then should run the shell script.
 
 
 ### License
