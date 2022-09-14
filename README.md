@@ -348,7 +348,7 @@ export PATH="$PATH:$HOME/opt/anaconda3/condabin"
 
 Restart your terminal, or source the path file, or equivalent.
 
-After you add the Anaconda path, then you can verify it:
+Verify the version is 4.13.0 or higher:
 
 ```sh
 % conda --version
@@ -362,6 +362,13 @@ Update conda just in case it's changed recently:
 
 ```sh
 % conda update -n base -c defaults conda
+```
+
+Verify the version is 4.14.0 or higher:
+
+```sh
+% conda --version
+conda 4.14.0
 ```
 
 
