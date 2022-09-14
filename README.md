@@ -425,6 +425,8 @@ Preload python models:
 
 ```sh
 % python scripts/preload_models.py
+(or - depending on your python installation) 
+% python3 scripts/preload_models.py
 ```
 
 Heads up that the script does downloads that are somewhat large, more than 1GB.
@@ -445,6 +447,8 @@ Run:
 
 ```sh
 % python scripts/dream.py --full_precision  # half-precision requires autocast and won't work
+(or)
+% python3 scripts/dream.py --full_precision
 ```
 
 You should see output such as:
