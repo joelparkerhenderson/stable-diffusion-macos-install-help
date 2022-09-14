@@ -339,6 +339,7 @@ After you add the Anaconda path, then you can verify it:
 conda 4.13.0
 ```
 
+
 ### Update
 
 Update conda just in case it's changed recently:
@@ -424,8 +425,6 @@ Activate:
 Preload python models:
 
 ```sh
-% python scripts/preload_models.py
-(or - depending on your python installation) 
 % python3 scripts/preload_models.py
 ```
 
@@ -446,8 +445,6 @@ preloading CLIP model ...
 Run:
 
 ```sh
-% python scripts/dream.py --full_precision  # half-precision requires autocast and won't work
-(or)
 % python3 scripts/dream.py --full_precision
 ```
 
@@ -459,6 +456,9 @@ You should see output such as:
 * Initialization done! Awaiting your command (-h for help, 'q' to quit)
 dream> 
 ```
+
+Note: we use the option `--full-precision`, and not the option `--half-precision`. This is because the option `--half-precision` requires autocast and won't work.
+
 
 
 ### Troubleshooting TypeAlias
