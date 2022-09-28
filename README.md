@@ -6,9 +6,9 @@ Stable Diffusion macOS install help is our guide for this kind of setup:
 
 * [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) image generator
   
-* [Apple macOS Monterey](https://www.apple.com/macos/monterey/)
+* [Apple macOS Monterey](https://www.apple.com/macos/monterey/) operating system, current version
 
-* [Apple MacBook Pro with M1 ARM chip](https://www.apple.com/macbook-pro/) (not Apple x86-64 Intel chip)
+* [Apple MacBook Pro with M1 ARM chip](https://www.apple.com/macbook-pro/), and not Apple x86-64 Intel chip
 
 * [Homebrew](https://brew.sh) package manager
 
