@@ -8,7 +8,7 @@ Stable Diffusion macOS install help is our guide for this kind of setup:
   
 * [Apple macOS Monterey](https://www.apple.com/macos/monterey/) operating system, current version
 
-* [Apple MacBook Pro with M1 ARM chip](https://www.apple.com/macbook-pro/), and not Apple x86-64 Intel chip
+* [MacBook Pro with M1 ARM chip and 32GB free RAM](https://www.apple.com/macbook-pro/), not x86-64 Intel chip, not less than 32GB free RAM
 
 * [Homebrew](https://brew.sh) package manager
 
