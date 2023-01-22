@@ -378,6 +378,26 @@ conda 4.14.0
 
 Download the Stable Diffusion weights file; heads up that the file is somewhat large, more than 4GB.
 
+### Stable Diffusion verison 2
+
+Download the Stable Diffision version 2 checkpoint file:
+
+```sh
+curl -O -L https://huggingface.co/stabilityai/stable-diffusion-2-base/resolve/main/512-base-ema.ckpt
+```
+
+We prefer to put the file in its own directory so it's easier to access for all our macOS users:
+
+```sh
+% sudo mkdir -p /opt/stable-diffusion-checkpoints/2.0/
+% sudo mv 512-base-ema.ckpt /opt/stable-diffusion-checkpoints/2.0/
+```
+
+
+### Stable Diffision version 1
+
+Download the Stable Diffision version 1 checkpoint weights file:
+
 ```sh
 curl -L https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt > sd-v1-4.ckpt
 ```
@@ -385,8 +405,8 @@ curl -L https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/m
 We prefer to put the file in its own directory so it's easier to access for all our macOS users:
 
 ```sh
-% sudo mkdir /opt/stable-diffusion-ckpt
-% sudo mv sd-v1-4.ckpt /opt/stable-diffusion-ckpt
+% sudo mkdir -p /opt/stable-diffusion-checkpoints/1.4/
+% sudo mv sd-v1-4.ckpt /opt/stable-diffusion-checkpoints/1.4/
 ```
 
 
@@ -555,4 +575,33 @@ Your output files are now ready in this directory:
 
 ```sh
 outputs/img-samples
+```
+
+
+## Troubleshooting
+
+Troubleshooting can start with running these command line diagnostics:
+
+```sh
+brew --version
+
+python3 --version
+
+cmake --version
+
+git --version
+
+conda --version
+
+which conda
+
+# This may take a while because it's searching your entire system
+find / -regex '.*/bin/conda' -type f -perm +111 -print
+
+# This may show unexpected results if you have more than one conda
+CONDA_SUBDIR=osx-arm64 conda env create -f environment-mac.yaml
+
+conda activate ldm
+
+python3 scripts/dream.py --full_precision
 ```
