@@ -246,7 +246,7 @@ Install:
 % brew install anaconda
 ```
 
-Verify the version is 2023.03 or higher, and also that the version on the line that starts "==>" is identical to the version on the line that starts "/opt/homebrew/Caskroom/anaconda":
+Verify the version is 2023.03 or higher, and verify that the auto-update version is identical to the Caskroom version:
 
 ```sh
 % brew info --cask anaconda
@@ -256,11 +256,43 @@ Verify the version is 2023.03 or higher, and also that the version on the line t
 …
 ```
 
-If the versions aren't 2023.03 or higher, or the two versions differ, then reinstall and reverify:
+If the version is not 2023.03 or higher, or the auto-update version is not identical to the Caskroom version, then reinstall and reverify:
 
 ```sh
 % brew reinstall --cask anaconda
+…
+==> Uninstalling Cask anaconda
+…
+==> Installing Cask anaconda
+…
+🍺  anaconda was successfully installed!
+
 % brew info --cask anaconda
+```
+
+
+### Create /opt directory
+
+We like to install software such as anaconda within a system-wide top-level directory named "/opt", rather than within your personal user directory named "/Users/me" or similar. 
+
+This is because:
+
+* The directory "/opt" is what brew does by default
+
+* The "/opt" convention tends help with tutorials and troubleshooting as needed.
+
+* The system-wide directory makes it easier for multiple system users to all use the same Anaconda installation; for us, this tends to helps teachers and students who need to use shared systems.
+
+Ensure the system-wide top-level directory exists:
+
+```sh
+% mkdir -p /opt
+```
+
+In the next step, we will install anaconda to this directory:
+
+```
+/opt/anaconda3
 ```
 
 
@@ -271,19 +303,19 @@ Anaconda uses an installation shell script that you must run.
 Find the script:
 
 ```sh
-find /opt/homebrew/Caskroom/anaconda -name "*.sh" 
+% find /opt/homebrew/Caskroom/anaconda -name "*.sh" 
 ```
 
 Output shows the shell script name, which may use different version numbers depending on when you install Anaconda:
 
 ```sh
-/opt/homebrew/Caskroom/anaconda/2022.05/Anaconda3-2022.05-MacOSX-arm64.sh
+/opt/homebrew/Caskroom/anaconda/2023.03/Anaconda3-2023.03-MacOSX-arm64.sh
 ```
 
 Run the shell script via `sudo` and `sh` and the script name from above:
 
 ```sh
-% sudo sh /opt/homebrew/Caskroom/anaconda/2022.05/Anaconda3-2022.05-MacOSX-arm64.sh
+% sudo sh /opt/homebrew/Caskroom/anaconda/2023.03/Anaconda3-2023.03-MacOSX-arm64.sh
 ```
 
 Your system should prompt you to type your password, then should run the shell script.
@@ -316,13 +348,13 @@ Anaconda3 will now be installed into this location:
 If you are generally a novice user, then use the Anaconda default directory, such as:
 
 ```sh
-/Users/YourNameHere/anaconda3
+/Users/me/anaconda3
 ```
 
 If you are generally an advanced user, then you may want to use our preferred naming convention, which installs many programs into the user's `opt` directory, such as:
 
 ```sh
-$HOME/opt/anaconda3
+/Users/me/opt/anaconda3
 ```
 
 Type your installation directory, then return.
@@ -348,17 +380,28 @@ Anaconda installs and advises you:
 For changes to take effect, close and re-open your current shell.
 ```
 
+Close your current shell. 
+
+Open a new shell.
+
 Verify the installation works by running Anaconda using its full path:
 
 ```sh
 % /opt/anaconda3/condabin/conda --version
-conda 4.13.0
+conda 23.1.0
 ```
 
 
 ### Path
 
-Optionally, you can append the Anaconda path to your environment, such as by editing any of these:
+
+Export your preferred path such as:
+
+```sh
+export PATH="$PATH:/opt/anaconda3/condabin"
+```
+
+Optionally, you can append the Anaconda path to your environment, such as by editing whichever of these files you use, then closing your shell and opening a new shell:
 
 * `/etc/bashrc` 
 
@@ -368,19 +411,26 @@ Optionally, you can append the Anaconda path to your environment, such as by edi
 
 * `$HOME/.zshrc`
 
-Export your preferred path such as:
+Verify there is exactly one `conda` program on your path:
 
 ```sh
-export PATH="$PATH:$HOME/opt/anaconda3/condabin"
+% which conda
+/opt/anaconda3/condabin/conda
 ```
 
-Restart your terminal, or source the path file, or equivalent.
+If you have more than one `conda` program on your path, then you'll need to be sure you're doing the rest of this guide using `conda` that you want. 
 
-Verify the version is 4.13.0 or higher:
+  * You can adjust your path, so it chooses the right `conda` program first.
+  
+  * You can run conda via the full path `/opt/anaconda3/condabin/conda`.
+
+  * You can uninstall the other `conda` programs, if no one on your system needs them.
+  
+Verify the version is 23.1.0 or higher:
 
 ```sh
 % conda --version
-conda 4.13.0
+conda 23.1.0
 ```
 
 
@@ -389,20 +439,14 @@ conda 4.13.0
 Update conda just in case it's changed recently:
 
 ```sh
-% conda update -n base -c defaults conda
-```
-
-Verify the version is 4.14.0 or higher:
-
-```sh
-% conda --version
-conda 4.14.0
+% sudo conda update -n base -c defaults conda
 ```
 
 
 ## Stable Diffusion weights file
 
 Download the Stable Diffusion weights file; heads up that the file is somewhat large, more than 4GB.
+
 
 ### Stable Diffusion verison 2
 
@@ -420,7 +464,7 @@ We prefer to put the file in its own directory so it's easier to access for all 
 ```
 
 
-### Stable Diffision version 1
+### Stable Diffision version 1 - DEPRECATED
 
 Download the Stable Diffision version 1 checkpoint weights file:
 
