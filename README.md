@@ -88,6 +88,19 @@ Verify the version is 3.5.10 or higher:
 Homebrew 3.5.10
 ```
 
+Do any brew upgrades:
+
+```sh
+% brew upgrade
+% brew upgrade --cask --greedy
+```
+
+Verify brew is working:
+
+```sh
+% brew doctor
+```
+
 
 ## Python
 
@@ -101,7 +114,7 @@ Verify the path is typical:
 
 ```sh
 % brew --prefix python
-/opt/homebrew/opt/python@3.10
+/opt/homebrew/opt/python@3.11
 ```
 
 Verify your system can locate the program:
@@ -111,11 +124,11 @@ Verify your system can locate the program:
 /opt/homebrew/bin/python3
 ```
 
-Verify the version is 3.10.6 or higher:
+Verify the version is 3.11 or higher:
 
 ```sh
 % python3 --version
-Python 3.10.6
+Python 3.11.3
 ```
 
 
@@ -141,11 +154,11 @@ Verify your system can locate the program:
 /opt/homebrew/bin/cmake
 ```
 
-Verify the version is 3.24.1 or higher:
+Verify the version is 3.26 or higher:
 
 ```sh
 % cmake --version
-cmake version 3.24.1
+cmake version 3.26.3
 ```
 
 
@@ -171,11 +184,11 @@ Verify your system can locate the program:
 /opt/homebrew/bin/git
 ```
 
-Verify the version is 2.37.3 or higher:
+Verify the version is 2.40 or higher:
 
 ```sh
 % git --version
-git version 2.37.3
+git version 2.40.0
 ```
 
 
@@ -217,11 +230,11 @@ Verify your system can locate the program:
 /opt/homebrew/bin/rustc
 ```
 
-Verify the version is 1.63.0 or higher:
+Verify the version is 1.68 or higher:
 
 ```sh
 % rustc --version
-rustc 1.63.0
+rustc 1.68.2
 ```
 
 
@@ -233,14 +246,21 @@ Install:
 % brew install anaconda
 ```
 
-Verify:
+Verify the version is 2023.03 or higher, and also that the version on the line that starts "==>" is identical to the version on the line that starts "/opt/homebrew/Caskroom/anaconda":
 
 ```sh
 % brew info --cask anaconda
-==> anaconda: 2022.05 (auto_updates)
-https://www.anaconda.com/
-/opt/homebrew/Caskroom/anaconda/2022.05 (304.8MB)
+==> anaconda: 2023.03 (auto_updates)
 …
+/opt/homebrew/Caskroom/anaconda/2023.03 (304.8MB)
+…
+```
+
+If the versions aren't 2023.03 or higher, or the two versions differ, then reinstall and reverify:
+
+```sh
+% brew reinstall --cask anaconda
+% brew info --cask anaconda
 ```
 
 
