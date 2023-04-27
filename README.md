@@ -18,8 +18,6 @@ Stable Diffusion macOS install help is our guide for this kind of setup:
   
 * [git](https://www.git-scm.com) source code manager
 
-* [Rust](https://www.rust-lang.org) programming language
-
 * [protobuf](https://developers.google.com/protocol-buffers) data structures
  
 * [Anaconda](https://www.anaconda.com) data science platform
@@ -34,18 +32,19 @@ See our Stable Diffusion image gallery:
 
 This guide is our notes about our preferred way of installing Stable Diffusion.
 
-* If you want the easiest way to try Stable Diffusion on macOS, then try this first: https://diffusionbee.com/
+* If you want an easy way to try Stable Diffusion on macOS, then try this first: https://diffusionbee.com/
 
-* If you want the maximum configurability, and you are open to installing a bunch of software pieces, then try this guide.
+* If you want an easy way to try Stable Diffusion on macOS and other operating systems, then try this first: https://github.com/invoke-ai/InvokeAI
+
+* If you want maximum configurability on macOS, and you willing to install a bunch of software pieces, then try this guide.
 
 This guide is intentionally step-by-step, because we want to help more people be successful, including people who are trying these kinds of software installs for the first time.
 
 * This guide is intentionally using steps that help multiple macOS users on the same system, because we want this guide to be able to help people who share a computer, such as teachers and students in schools.
   
-* This guide is intentionally doing "kitchen sink" approach, because this can help people with more capabilities as they try Stable Diffusion.
+* This guide is intentionally doing a "kitchen sink" approach of installing everything, because this can help our people with more capabilities as they try Stable Diffusion.
 
 We welcome constructive feedback via GitHub issues, or pull requests, or email to joel@joelparkerhenderson.com.
-
 
 
 ## Thanks
@@ -205,36 +204,6 @@ Verify the path is typical:
 ```sh
 % brew --prefix protobuf
 /opt/homebrew/opt/protobuf
-```
-
-
-## Rust
-
-Install:
-
-```sh
-% brew install rust
-```
-
-Verify the path is typical:
-
-```sh
-% brew --prefix rust
-/opt/homebrew/opt/rust
-```
-
-Verify your system can locate the program:
-
-```sh
-% which rustc
-/opt/homebrew/bin/rustc
-```
-
-Verify the version is 1.68 or higher:
-
-```sh
-% rustc --version
-rustc 1.68.2
 ```
 
 
@@ -456,7 +425,7 @@ Download the Stable Diffision version 2 checkpoint file:
 curl -O -L https://huggingface.co/stabilityai/stable-diffusion-2-base/resolve/main/512-base-ema.ckpt
 ```
 
-We prefer to put the file in its own directory so it's easier to access for all our macOS users:
+We prefer to move the file into its own directory because that makes it easier to use among all the system users:
 
 ```sh
 % sudo mkdir -p /opt/stable-diffusion-checkpoints/2.0/
@@ -497,6 +466,11 @@ Install:
 % cd stable-diffusion
 ```
 
+If you have previously installed the repository, then change into its directory, and reset the branch:
+
+```sh
+% git reset --hard origin/master.
+```
 
 ### Link
 
