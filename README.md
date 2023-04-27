@@ -29,17 +29,23 @@ See our Stable Diffusion image gallery:
 ➤ https://github.com/joelparkerhenderson/stable-diffusion-image-gallery
 
 
+
 ## Guide Goals
 
 This guide is our notes about our preferred way of installing Stable Diffusion.
 
+* If you want the easiest way to try Stable Diffusion on macOS, then try this first: https://diffusionbee.com/
+
+* If you want the maximum configurability, and you are open to installing a bunch of software pieces, then try this guide.
+
 This guide is intentionally step-by-step, because we want to help more people be successful, including people who are trying these kinds of software installs for the first time.
 
-This guide is intentionally using steps that help multiple macOS users on the same system, because we want this guide to be able to help people who share a computer, such as teachers and students in schools.
+* This guide is intentionally using steps that help multiple macOS users on the same system, because we want this guide to be able to help people who share a computer, such as teachers and students in schools.
   
-This guide is intentionally doing "kitchen sink" approach, because this can help people with more capabilities as they try Stable Diffusion.
+* This guide is intentionally doing "kitchen sink" approach, because this can help people with more capabilities as they try Stable Diffusion.
 
 We welcome constructive feedback via GitHub issues, or pull requests, or email to joel@joelparkerhenderson.com.
+
 
 
 ## Thanks
